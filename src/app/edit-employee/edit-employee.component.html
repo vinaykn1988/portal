@@ -1,0 +1,51 @@
+<div>
+    <h2>Edit Employee Details</h2>
+  <form #myForm id="myForm">
+    <label>Enter employee ID to edit:</label><br>
+    <input type="text" id="emp_id" name="emp_id" placeholder="id" required><br>
+
+    <a routerLink="/getEmployees"><button class="button" >Back</button></a>
+    
+    <button type="submit" (click)="onSelect()">Submit</button>
+    
+    <input type="reset">
+
+  </form>
+</div>
+
+<div *ngIf='employeeDetails'>
+  
+        <h2>Edit Submission Form</h2>
+      <form #form  id="myForm" action='http://localhost:3000/updateEmployee' method='post'>
+    
+        <label>Employee ID:</label><br>
+        <input type="number" name="emp_id" placeholder="id" value={{employeeDetails[0].emp_id}} required><br>
+    
+        <label>First name:</label><br>
+        <input type="text" name="first_name" placeholder="first name" value={{employeeDetails[0].first_name}} required><br>
+    
+        <label>Last name:</label><br>
+        <input type="text" name="last_name" placeholder="last name"  value={{employeeDetails[0].last_name}} required><br>
+    
+        <label>Age:</label><br>
+        <input type="number" name="age" placeholder="age" value={{employeeDetails[0].age}} required><br>
+        
+        <label>sex:</label><br>
+        <input type="text" name="sex" placeholder="sex" value={{employeeDetails[0].sex}} required><br>
+    
+        <label>Martial Status:</label><br>
+        <input type="text" name="marital_status" placeholder="status" value={{employeeDetails[0].marital_status}} required><br>
+    
+        <label>Address:</label><br>
+        <input type="text" name="address" placeholder="address" value={{employeeDetails[0].address}} required><br>
+    
+        <label>Designation:</label><br>
+        <input type="text" name="designation" placeholder="designation" value={{employeeDetails[0].designation}} required><br>
+        
+        <button type="submit" (click)="form.submit()">Submit</button>
+        
+        <input type="reset">
+    
+      </form>
+</div>
+

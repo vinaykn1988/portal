@@ -1,0 +1,48 @@
+<div style="text-align:center">
+    <h1 id='title'>
+      Welcome to {{ title }}
+    </h1>
+    <h4>Below are the list of current employees</h4>
+
+  </div>        
+
+<ul class='users'>
+
+      <table>
+          <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Marital Status</th>
+            <th>Address</th>
+            <th>Designation</th>
+          </tr>
+          <tr *ngFor= "let user of employeesList">
+            <td>{{user.emp_id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.sex}}</td>
+            <td>{{user.marital_status}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.designation}}</td>
+          </tr>
+        </table>
+</ul>
+
+<div style="text-align:center">
+
+<nav>
+<a routerLink="/addEmployee"><button class="button" >Add Employee</button></a>
+
+<a routerLink="/editEmployee"><button class="button" >Edit Employee</button></a>
+
+<a routerLink="/deleteEmployee"><button class="button" >Delete Employee</button></a>
+
+</nav>
+</div>
+
+
+

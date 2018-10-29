@@ -1,0 +1,37 @@
+<div>
+    <h2>Employee Submission Form</h2>
+  <form #form  id="myForm" action='http://localhost:3000/addEmployee' method='post' ng-submit="onSubmit()">
+
+    <label>Employee ID:</label><br>
+    <input type="number" name="emp_id" placeholder="id" required><br>
+
+    <label>First name:</label><br>
+    <input type="text" name="first_name" placeholder="first name" required><br>
+
+    <label>Last name:</label><br>
+    <input type="text" name="last_name" placeholder="last name" required><br>
+
+    <label>Age:</label><br>
+    <input type="number" name="age" placeholder="age" required><br>
+    
+    <label>sex:</label><br>
+    <input type="text" name="sex" placeholder="sex" required><br>
+
+    <label>Martial Status:</label><br>
+    <input type="text" name="marital_status" placeholder="status" required><br>
+
+    <label>Address:</label><br>
+    <input type="text" name="address" placeholder="address" required><br>
+
+    <label>Designation:</label><br>
+    <input type="text" name="designation" placeholder="designation" required><br>
+
+    <a routerLink="/getEmployees"><button class="button" >Back</button></a>
+    
+    <button type="submit" (click)="form.submit()">Submit</button>
+    
+    <input type="reset">
+
+  </form>
+</div>
+
