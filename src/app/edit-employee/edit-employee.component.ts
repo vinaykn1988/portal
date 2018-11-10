@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Employee} from '../employeeType';
 import {EmployeeService} from '../employees.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit-employee',
@@ -12,7 +13,8 @@ export class EditEmployeeComponent implements OnInit {
   employeeDetails;
   id: any;
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService,
+    private location: Location) { }
 
   ngOnInit() {
   }
@@ -33,6 +35,10 @@ export class EditEmployeeComponent implements OnInit {
 
     });
 
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

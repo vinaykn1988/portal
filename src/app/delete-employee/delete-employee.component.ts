@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {EmployeeService} from '../employees.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-delete-employee',
@@ -8,7 +9,8 @@ import {EmployeeService} from '../employees.service';
 })
 export class DeleteEmployeeComponent implements OnInit {
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService,
+    private location: Location) { }
 
   ngOnInit() {
   }
@@ -33,6 +35,10 @@ export class DeleteEmployeeComponent implements OnInit {
     });
 
 
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

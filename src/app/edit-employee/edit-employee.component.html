@@ -4,7 +4,9 @@
     <label>Enter employee ID to edit:</label><br>
     <input type="text" id="emp_id" name="emp_id" placeholder="id" required><br>
 
-    <a routerLink="/getEmployees"><button class="button" >Back</button></a>
+    <!-- <a routerLink="/getEmployees"><button class="button" >Back</button></a> -->
+
+    <button (click)="goBack()">Back</button>
     
     <button type="submit" (click)="onSelect()">Submit</button>
     

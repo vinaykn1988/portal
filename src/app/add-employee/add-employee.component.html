@@ -26,7 +26,9 @@
     <label>Designation:</label><br>
     <input type="text" name="designation" placeholder="designation" required><br>
 
-    <a routerLink="/getEmployees"><button class="button" >Back</button></a>
+    <!-- <a routerLink="/getEmployees"><button class="button" >Back</button></a> -->
+
+    <button (click)="goBack()">Back</button>
     
     <button type="submit" (click)="form.submit()">Submit</button>
     
